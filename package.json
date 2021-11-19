@@ -1,19 +1,30 @@
 {
-  "name": "lms",
+  "name": "project-template",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "next": "12.0.4",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "@latest",
+    "react": "@latest",
+    "react-dom": "@latest"
   },
   "devDependencies": {
-    "eslint": "7",
-    "eslint-config-next": "12.0.4"
+    "autoprefixer": "@latest",
+    "eslint": "@latest",
+    "eslint-config-next": "@latest",
+    "husky": "@latest",
+    "lint-staged": "@latest",
+    "postcss": "@latest",
+    "prettier": "@latest",
+    "tailwindcss": "@latest"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --cache --fix",
+    "*.{js,jsx,css,md}": "prettier --write"
   }
 }
